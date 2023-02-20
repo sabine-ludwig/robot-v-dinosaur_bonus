@@ -15,10 +15,13 @@ class Weapons:
         self.chosen_weapon = ''
 
         while True:
+
             for i, weapon in enumerate(self.weapon_types):
                 print(f" {i + 1}. {weapon.title()}")
             print()
+            
             self.weapon_type = int(input("Which type of weapon would you like to use (enter number corresponding to preferred weapon type) > "))
+            
             if self.weapon_type in range(1, (len(self.weapon_types) + 1)):
                 self.chosen_weapon += self.weapon_types[self.weapon_type - 1]
                 return self.chosen_weapon
